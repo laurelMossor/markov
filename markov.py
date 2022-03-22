@@ -3,16 +3,21 @@
 from random import choice
 
 
+
+
 def open_and_read_file(file_path):
     """Take file path as string; return text as string.
 
     Takes a string that is a file path, opens the file, and turns
     the file's contents as one string of text.
     """
+    text_source = open(file_path)
+    file_as_string = text_source.read()
+    file_as_string = file_as_string.replace("\n", " ")
 
-    # your code goes here
+    return file_as_string
 
-    return 'Contents of your file as one long string'
+# open_and_read_file("green-eggs.txt")
 
 
 def make_chains(text_string):
