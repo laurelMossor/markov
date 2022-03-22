@@ -3,8 +3,6 @@
 from random import choice
 
 
-
-
 def open_and_read_file(file_path):
     """Take file path as string; return text as string.
 
@@ -67,18 +65,29 @@ def make_chains(text_string):
 
     return chains
 
-make_chains(test)
+chains = make_chains(test)
 
 
 def make_text(chains):
     """Return text from chains."""
-
+    
     words = []
+    keys = list(chains.keys())
 
-    # your code goes here
+    initial_key = choice(key)
 
-    return ' '.join(words)
+    # initial key 
+        # -> values to pick from 
+        # -> word2 of current key + random picked value 
+            #-> values to pick from
 
+    while True:
+
+
+    # return ' '.join(words)
+    return keys
+
+keys = make_text(chains)
 
 input_path = 'green-eggs.txt'
 
