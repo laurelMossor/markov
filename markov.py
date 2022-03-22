@@ -17,7 +17,7 @@ def open_and_read_file(file_path):
 
     return file_as_string
 
-# open_and_read_file("green-eggs.txt")
+test = open_and_read_file("green-eggs.txt")
 
 
 def make_chains(text_string):
@@ -44,12 +44,30 @@ def make_chains(text_string):
         >>> chains[('there','juanita')]
         [None]
     """
-
+    # key = (word1, word2); value = dict[key] - > word 3
+    # split string into list of words with split
+    # loop through string by index, using the range(len(list of words))
+        # loop through i and i-1, skipping the first index
+    words = text_string.split()
     chains = {}
 
-    # your code goes here
+    for i in range(len(words)):
+        if i == 0:
+            continue
+        
+        word1 = words[i-1]
+        word2 = words[i]
+        if i == len(words) - 1:
+            following = None
+        else:
+            following = words[i+1]
+
+        chains[(word1, word2)] = chains.get((word1, word2), []) + [following]
+    
 
     return chains
+
+make_chains(test)
 
 
 def make_text(chains):
