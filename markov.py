@@ -106,7 +106,10 @@ def make_text(chains):
 # the_thing = make_text(chains)
 
 # input_path = 'green-eggs.txt'
-input_path = "gettysburg.txt"
+# input_path = "gettysburg.txt"
+# input_path = "george_carlin.txt"
+# input_path = "i-have-a-dream.txt"
+# input_path = "steve-jobs.txt"
 
 # Open the file and turn it into one long string
 input_text = open_and_read_file(input_path)
